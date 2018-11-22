@@ -26,11 +26,11 @@
               "src/styles.css"
             ],
             "scripts": [
-              "../dist/js/jquery.min.js",
-"../dist/js/jquery.uniform.min.js",
-"../dist/js/jquery.slicknav.min.js",
-"../dist/js/wow.min.js",
-"../dist/js/scripts.js"
+              "node_modules/dist/js/jquery.min.js",
+              "node_modules/dist/js/jquery.uniform.min.js",
+              "node_modules/dist/js/jquery.slicknav.min.js",
+              "node_modules/dist/js/wow.min.js",
+              "node_modules/dist/js/scripts.js"
             ]
           },
           "configurations": {

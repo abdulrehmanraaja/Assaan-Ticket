@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'ContactUs', component: ContactUsComponent },
   { path: 'destination', component: DestinationComponent },
-  { path: 'tailar-made', component: TailarMadeComponent },
+  { path: 'tailar-made', component: TailarMadeComponent },  
 ];
 
 @NgModule({
