@@ -8,6 +8,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DestinationComponent } from './pages/destination/destination.component';
+import { TailarMadeComponent } from './pages/tailar-made/tailar-made.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    DestinationComponent,
+    TailarMadeComponent
   ],
   imports: [
     BrowserModule,

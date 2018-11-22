@@ -25,7 +25,13 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "../dist/js/jquery.min.js",
+"../dist/js/jquery.uniform.min.js",
+"../dist/js/jquery.slicknav.min.js",
+"../dist/js/wow.min.js",
+"../dist/js/scripts.js"
+            ]
           },
           "configurations": {
             "production": {
