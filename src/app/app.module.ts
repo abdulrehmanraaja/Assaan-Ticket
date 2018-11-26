@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DestinationComponent } from './pages/destination/destination.component';
 import { TailarMadeComponent } from './pages/tailar-made/tailar-made.component';
+import { FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TailarMadeComponent } from './pages/tailar-made/tailar-made.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
