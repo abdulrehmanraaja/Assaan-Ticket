@@ -20,13 +20,14 @@
     <div class="wrap">
       <form #searchForm="ngForm">
 
-        {{ searchForm.value | json}}
+    
         <!-- Row -->
         <div class="f-row">
           <div class="form-group datepicker one-third">
             <label for="dep-date">Departure date and time</label>
-            <input  type="text" id="dep-date" name="dep-date" [(ngModel)]="userModel.date"/>
+            <input  type="text" required #deptDate="ngModel" class="form-control" id="dep-date" name="dep-date" [(ngModel)]="userModel.date"/>
           </div>
+         
           <div class="form-group select one-third">
             <label>Pick up location</label>
             <select name="pickupLocation." [(ngModel)] = "userModel.fromLoc">
