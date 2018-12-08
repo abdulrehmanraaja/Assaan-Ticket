@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from './location';
 import { Locations } from './mock-location';
-import { FormsModule} from '@angular/forms';
+import { Validators, FormBuilder, FormGroup, FormsModule } from '@angular/forms';
 import { ClsSearchVehicle} from './cls-search-vehicle' ;
 @Component({
   selector: 'app-home',
@@ -10,10 +10,22 @@ import { ClsSearchVehicle} from './cls-search-vehicle' ;
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-  locations = Locations;
-  userModel = new ClsSearchVehicle('10/12/2018',2,3);
-  ngOnInit() {
-  }
+  private SearchVehicle: FormGroup;
 
+  constructor(private formBuilder: FormBuilder) {}
+  locations = Locations;
+ 
+  ngOnInit() {
+    this.SearchVehicle = this.formBuilder.group({
+      bookingDate: ['', [Validators.required]],
+      pickupLoc: ['', [Validators.required]],
+      dropoffLoc: ['', [Validators.required]],
+      
+  });
+  }
+  GetVehicles()
+  {
+  
+console.log(this.SearchVehicle.value)
+  }
 }

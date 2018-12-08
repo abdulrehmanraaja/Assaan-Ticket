@@ -18,26 +18,26 @@
   <!-- Search -->
   <div class="advanced-search color" id="booking">
     <div class="wrap">
-      <form #searchForm="ngForm">
+      <form [formGroup]="SearchVehicle" (ngSubmit)="GetVehicles()">
 
     
         <!-- Row -->
         <div class="f-row">
           <div class="form-group datepicker one-third">
             <label for="dep-date">Departure date and time</label>
-            <input  type="text" required #deptDate="ngModel" class="form-control" id="dep-date" name="dep-date" [(ngModel)]="userModel.date"/>
+            <input  type="text" formControlName="bookingDate" class="form-control" id="dep-date" name="dep-date"/>
           </div>
          
           <div class="form-group select one-third">
             <label>Pick up location</label>
-            <select name="pickupLocation." [(ngModel)] = "userModel.fromLoc">
+            <select name="pickupLocation" formControlName="pickupLoc">
               <option selected>Please Select Location</option>
               <option *ngFor="let location of locations" value={{location.id}}>{{location.name}}</option>
             </select>
           </div>
           <div class="form-group select one-third">
             <label>Drop off location</label>
-            <select name="dropoffLocation" [(ngModel)]="userModel.toLoc">
+            <select name="dropoffLocation" formControlName="dropoffLoc">
               <option selected>Please Select Location</option>
               <option *ngFor="let location of locations" value={{location.id}}>{{location.name}}</option>
             </select>
@@ -49,7 +49,7 @@
         <!-- Row -->
         <div class="f-row">
           <div class="form-group right">
-            <button type="submit" class="btn large black">Find a transfer</button>
+            <button type="submit" class="btn large black" [disabled]="!SearchVehicle.valid">Find a transfer</button>
           </div>
          
         </div>
